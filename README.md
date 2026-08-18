@@ -1,84 +1,49 @@
-# Support Desk AI Assistant
+# 🤖 Support Desk AI Assistant
 
-An AI-powered support assistant that helps customer support teams automatically
-classify ticket urgency, retrieve relevant FAQ information, and decide the
-appropriate action for each support ticket.
+An AI-powered support ticket system that automatically analyzes tickets, predicts urgency, retrieves relevant FAQ information, and recommends the next support action.
 
-The system combines Machine Learning, Retrieval-Augmented Generation (RAG),
-a lightweight agentic workflow, and a FastAPI application.
+## 🚀 Features
 
----
+* 🎫 Support ticket analysis
+* 🧠 ML-based urgency prediction
+* 📚 RAG-based FAQ retrieval
+* 🤖 AI agent for decision-making
+* ⚡ FastAPI backend
+* 🌐 Web interface
+* 🐳 Docker support
 
-## 1. Problem Statement
+## 🛠️ Tech Stack
 
-Customer support teams receive many support tickets that must be manually
-read, prioritized, and answered.
+**Python • FastAPI • Scikit-learn • Pandas • RAG • TF-IDF • Logistic Regression • Docker**
 
-Low-priority questions and urgent incidents often enter the same queue.
-Support agents also spend significant time answering questions that are
-already covered in FAQ or help documentation.
+## ▶️ Run Locally
 
-This can increase response time and reduce support team efficiency.
+```bash
+git clone https://github.com/YOUR_USERNAME/support-desk-ai.git
+cd support-desk-ai
+pip install -r requirements.txt
+uvicorn app.main:app --reload
+```
 
-## 2. Proposed Solution
-
-Support Desk AI Assistant provides an intelligent workflow that:
-
-1. Receives a support ticket.
-2. Predicts its urgency as Low, Medium, or High.
-3. Detects whether the ticket is a question.
-4. Searches the FAQ knowledge base when appropriate.
-5. Retrieves relevant information using RAG.
-6. Uses a lightweight agent to decide the next action.
-7. Returns a structured response to the user.
-
-### Expected Benefits
-
-- Faster ticket triage
-- Automatic handling of common FAQ questions
-- Faster identification of urgent tickets
-- Reduced repetitive work for support agents
-- Consistent support workflow
-
----
-
-## 3. System Architecture
+Open:
 
 ```text
-                    ┌─────────────────────┐
-                    │      User/Ticket    │
-                    └──────────┬──────────┘
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │     FastAPI API     │
-                    │     app/main.py     │
-                    └──────────┬──────────┘
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │   Support Agent     │
-                    │     agent.py        │
-                    └───────┬───────┬─────┘
-                            │       │
-                 ┌──────────┘       └──────────┐
-                 ▼                             ▼
-       ┌──────────────────┐          ┌──────────────────┐
-       │ ML Classifier    │          │   RAG Retriever  │
-       │ TF-IDF +         │          │ TF-IDF +         │
-       │ Logistic         │          │ Cosine           │
-       │ Regression       │          │ Similarity       │
-       └────────┬─────────┘          └────────┬─────────┘
-                │                             │
-                ▼                             ▼
-       ┌──────────────────┐          ┌──────────────────┐
-       │ Urgency          │          │ FAQ Knowledge    │
-       │ Prediction       │          │ Base             │
-       └────────┬─────────┘          └────────┬─────────┘
-                │                             │
-                └──────────────┬──────────────┘
-                               ▼
-                    ┌─────────────────────┐
-                    │ Agent Decision      │
-                    │ & Final Response    │
-                    └─────────────────────┘
+http://localhost:8000
+```
+
+API documentation:
+
+```text
+http://localhost:8000/docs
+```
+
+## 🎯 Objective
+
+To automate customer support workflows using **Machine Learning, RAG, and Agentic AI**, reducing manual effort and improving ticket prioritization.
+
+## 👨‍💻 Developer
+
+**Krushna Jape**
+B.Tech Artificial Intelligence & Machine Learning
+
+> Developed for academic and portfolio purposes.
